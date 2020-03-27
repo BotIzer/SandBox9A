@@ -1,8 +1,6 @@
 ﻿import fs from "fs";
 import http from "http";
 import url from "url";
-import { Http2ServerRequest } from "http2";
-
 export default class Content {
     public content(req: http.IncomingMessage, res: http.ServerResponse): void {
         // favicon.ico kérés kiszolgálása:
@@ -28,6 +26,8 @@ export default class Content {
 
         res.write("Hello Jedlik, hello 9.A");
         res.write("<h2 style='color:red;'>Tipescript</h2>");
+        res.write("próba\n");
+        res.write("alma\n");
 
         // <---- Fejezd be a kódolást
 
